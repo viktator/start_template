@@ -76,7 +76,7 @@ gulp.task('image', function () {
             interlaced: true
         }))
         .pipe(gulp.dest('./public/image'))
-        .pipe(connect.reload({string: true}));
+        .pipe(connect.reload({stream: true}));
 });
 // fonts
 gulp.task('fonts', function() {
@@ -89,6 +89,7 @@ gulp.task('build', [
     'js',
     'style',
     'fonts',
+    'image'
     
 ]);
 
