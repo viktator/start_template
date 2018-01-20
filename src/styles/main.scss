@@ -252,6 +252,10 @@
 		 color: #062033;
 
 	 }
+	 .info_content_container {
+		 display: flex;
+		 justify-content: space-around;
+	 }
 	 .info_column {
 		 height: 610px;
 		 width: 300px;
@@ -513,7 +517,7 @@
 }
                           /*section5*/
 .section5 {
-	background: url('../image/sec5_bg.jpg')no-repeat center;
+	background: url('../image/sec5_bg.jpg');
 	padding-top: 60px;
 	padding-bottom: 80px;
 	.sec5_title {
@@ -589,6 +593,7 @@
 	}
 }
 .section7 {
+	padding-bottom: 80px;
 	.sec7_container {
 		max-width: 970px;
 		width: 100%;
@@ -644,6 +649,7 @@
 				width: 100%;
 				border: none;
 				border-bottom: 2px solid #f0f0f0;
+
 
 			}
 		}
