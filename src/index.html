@@ -9,7 +9,7 @@
 <body>
 <section class="section0">
 
-	<div class="header">
+	<div class="header ">
 		<div class="logo_text">
 			<div class="logo"><a href="#">sarajevo</a></div>
 		<input type="text" class="search" placeholder="I am your tag line">
@@ -341,11 +341,11 @@
 			</div>
 		</div>
 		<div class="right_container">
-			<form action="" method="">
+			<form id="form" action="" method=""  novalidate>
 				<h5>Say hello!</h5>
 				<div class="top_form">
-					<input type="text" placeholder="Name">
-					<input type="email"placeholder="Email">
+					<input class="name " type="text" name="name" placeholder="Name" >
+					<input class="mail " type="email" name="email" placeholder="Email" >
 				</div>
 				<textarea class="ta" name="" id=""  rows="3" placeholder="Message"></textarea><br>
 				<div class="btn_container"><button class="btn"><img src="image/Envelope.png" alt=""><p>Send message</p></button></div>
@@ -404,6 +404,6 @@
 		</div>
 	</div>
 </footer>
-
+<script src="./js/index.js"></script>
 </body>
 </html>

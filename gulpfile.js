@@ -46,9 +46,13 @@ gulp.task('style', function () {
 });
 // js
 gulp.task('js', function () {
-    gulp.src('./src/js/**/*.js')
+    gulp.src([
+
+        './node_modules/jquery/dist/jquery.js',
+        './src/js/index.js'
+    ])
         
-        .pipe(concat('main.js'))
+        .pipe(concat('index.js'))
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(sourcemaps.write())

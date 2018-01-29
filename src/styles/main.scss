@@ -22,6 +22,7 @@
 	
 }
 
+
 .logo_text {
 	padding-top: 30px;
 	padding-bottom: 20px;
@@ -149,6 +150,13 @@
 		top: 50%;
 		left: -57px;
 	}
+}
+.fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
 }
                             /*section1*/
 .section1 {
@@ -585,6 +593,7 @@
 		}
 	}
 }
+                                  /*section6*/
 .section6 {
 	padding-top: 80px;
 	.title_cont {
@@ -605,6 +614,7 @@
 		color: #062033;
 	}
 }
+                                          /*section7*/
 .section7 {
 	padding-bottom: 80px;
 	.sec7_container {
@@ -636,7 +646,7 @@
 			.top_form {
 				display: flex;
 				justify-content: space-between;
-				input{
+				.name, .mail{
 					width: 48%;
 					display: inline-block;
 					padding-bottom: 10px;
@@ -644,6 +654,10 @@
 					border: none;
 					border-bottom: 2px solid #f0f0f0;
 
+				}
+				.error{
+					border: 1px solid red;
+					border-radius: 4px;
 				}
 
 			}
@@ -694,7 +708,9 @@
 
 
 	}
+
 }
+
 .section8 {
 	width: 100%;
 	.map {
