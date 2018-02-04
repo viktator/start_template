@@ -1,35 +1,11 @@
-// $(document).ready(function() {
-//
-//     var form = $('#form');
-//
-//     form.on('submit', function(e) {
-//         e.preventDefault();
-//         var name = $('.name').val();
-//         var email = $('.mail').val();
-//         var nameReg = /^[a-z ,.'-]+$/i;
-//         var emailReg = /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
-//         if(!nameReg.test(name)) {
-//             $('.name').addClass("name_error");
-//         } else if (!emailReg.test(email)) {
-//             $('.mail').addClass("mail_error");
-//         }else {
-//             $('.name').removeClass('name_error');
-//             $('.mail').removeClass('mail_error');
-//             $('.name').reset().val('');
-//         }
-//
-//         // } || emailReg.test(email)) {
-//         //     console.log('error');
-//         // } else {
-//         //     console.log('sucsess');
-//         // }
-//
-//     })
-// })
-//
-//
+
+
+
 
 $(function () {
+
+
+
                           //form validation
     var regex = {
 
@@ -59,20 +35,196 @@ $(function () {
        winPos = $(window).scrollTop();
 
        if( winPos >= section0 ) {
-           $('.header').addClass('fixed');
+           $('.header').addClass('fixed').css({background: '#1C2937'});
        } else {
-           $('.header').removeClass('fixed');
+           $('.header').removeClass('fixed').css({background: ''});
        }
    })
-//   плавные якоря
+//                         slow  scrolling
 
-    $('a[href^="#"]').click(function () {
-        elementClick = $(this).attr("href");
-        destination = $(elementClick).offset().top;
+        $('.menu a').click(function () {
+            var elementClick = $(this).attr("href");
+            var destination = $(elementClick).offset().top;
 
             $('html').animate( { scrollTop: destination }, 1100 );
 
-        return false;
+            return false;
     });
 
+
+
+
+
+
 });
+
+//  slow line
+
+    $(function() {
+        $('.menu a').on('click', function(e) {
+             e.preventDefault();
+
+            var $this = $(this),
+            li = $this.closest('li');
+            li.addClass('blue_line_active').siblings().removeClass('blue_line_active');
+    })
+})
+
+    $(function () {
+         //   amnimated.js libery
+         //animation h2
+
+         $(window).on('scroll', function() {
+            $('.mov').each(function() {
+                var elem = $(this).offset().top;
+                var topWin =  $(window).scrollTop();
+
+                if(elem < topWin + 600) {
+                    $('.mov').addClass('bounceInLeft');
+                }
+            })
+
+        })
+
+
+        $(window).on('scroll', function() {
+            $('.mov1').each(function() {
+                var elem = $(this).offset().top;
+                var topWin =  $(window).scrollTop();
+
+                if(elem < topWin + 600) {
+                    $('.mov1').addClass('bounceInLeft');
+                }
+            })
+
+        })
+
+        $(window).on('scroll', function() {
+            $('.mov2').each(function() {
+                var elem = $(this).offset().top;
+                var topWin =  $(window).scrollTop();
+
+                if(elem < topWin + 600) {
+                    $('.mov2').addClass('bounceInLeft');
+                }
+            })
+
+        })
+
+        $(window).on('scroll', function() {
+            $('.mov3').each(function() {
+                var elem = $(this).offset().top;
+                var topWin =  $(window).scrollTop();
+
+                if(elem < topWin + 600) {
+                    $('.mov3').addClass('bounceInLeft');
+                }
+            })
+
+        })
+
+        $(window).on('scroll', function() {
+            $('.mov4').each(function() {
+                var elem = $(this).offset().top;
+                var topWin =  $(window).scrollTop();
+
+                if(elem < topWin + 600) {
+                    $('.mov4').addClass('bounceInLeft');
+                }
+            })
+
+        })
+
+
+        $(window).on('scroll', function() {
+            $('.text_column').each(function() {
+                var elem = $(this).offset().top;
+                 var winPos = $(window).scrollTop();
+
+                 if (elem < winPos + 600) {
+                $('.text_column').addClass('fadeInUp');
+            }
+        })
+    })
+
+    $(window).on('scroll', function() {
+        $('.man_pic li').each(function() {
+            var elem = $(this).offset().top;
+            var winPos = $(window).scrollTop();
+
+            if (elem < winPos + 600) {
+                $('.man_pic li').addClass('fadeInUp');
+            }
+        })
+    })
+
+    $(window).on('scroll', function() {
+        $('.btn').each(function() {
+            var elem = $(this).offset().top;
+            var winPos = $(window).scrollTop();
+
+            if (elem < winPos + 600) {
+                $('.btn').addClass('tada');
+            }
+        })
+    })
+
+    $(window).on('scroll', function() {
+        $('.right').each(function() {
+            var elem = $(this).offset().top;
+            var winPos = $(window).scrollTop();
+
+            if (elem < winPos + 600) {
+                $('.right').addClass('bounceInRight');
+            }
+        })
+    })
+
+    $(window).on('scroll', function() {
+        $('.left').each(function() {
+            var elem = $(this).offset().top;
+            var winPos = $(window).scrollTop();
+
+            if (elem < winPos + 600) {
+                $('.left').addClass('bounceInLeft');
+            }
+        })
+    })
+
+    $(window).on('scroll', function() {
+        $('.gallery_menu li').each(function() {
+            var elem = $(this).offset().top;
+            var winPos = $(window).scrollTop();
+
+            if (elem < winPos + 600) {
+                $('.gallery_menu li').addClass('slideInUp');
+            }
+        })
+    })
+
+
+    $(window).on('scroll', function() {
+        $('.sec5_img').each(function() {
+            var elem = $(this).offset().top;
+            var winPos = $(window).scrollTop();
+
+            if (elem < winPos + 500) {
+                $('.sec5_img').addClass('zoomIn');
+            }
+        })
+    })
+
+
+    $(window).on('scroll', function() {
+        $('.social_sign').each(function() {
+            var elem = $(this).offset().top;
+            var winPos = $(window).scrollTop();
+
+            if (elem < winPos + 600) {
+                $('.social_sign').addClass('bounceInDown');
+            }
+        })
+    })
+
+
+})

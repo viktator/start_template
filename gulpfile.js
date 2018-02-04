@@ -47,13 +47,11 @@ gulp.task('style', function () {
 // js
 gulp.task('js', function () {
     gulp.src([
-
         './node_modules/jquery/dist/jquery.js',
         './src/js/index.js'
     ])
-        
-        .pipe(concat('index.js'))
         .pipe(sourcemaps.init())
+        .pipe(concat('index.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./public/js'))
