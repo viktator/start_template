@@ -70,6 +70,23 @@ $(function () {
     })
 })
 
+$(function() {
+
+                                                 //  tabs
+  $('.tabs_control a').on('click', function(e) {
+            e.preventDefault();
+
+      var $this = $(this),
+          item = $this.closest('li'),
+          item_content = $('.gallery_photo'),
+          itemPos = item.data('class');
+
+
+      item_content.filter('.gallery_photo_' + itemPos ).addClass('tabs_control_active').siblings().removeClass('tabs_control_active');
+      item.addClass('tab_active').siblings().removeClass('tab_active');
+  })
+})
+
     $(function () {
          //   amnimated.js libery
          //animation h2

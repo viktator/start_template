@@ -367,7 +367,9 @@
 		margin-bottom: 75px;
 		ul li {
 			display: inline-block;
+
 		}
+
 		a {
 			display: inline-block;
 			padding: 10px 20px;
@@ -383,8 +385,15 @@
 			}
 		}
 
+
+	}
+	.tab_active {
+		background: #4c76ff;
+		border-radius: 5px;
+		color: #fff;
 	}
 	.gallery_photo {
+		display: none;
 		ul {
 			display: flex;
 		}
@@ -445,6 +454,10 @@
 				top: 0;
 			}
 		}
+	}
+	.tabs_control_active {
+		display: block;
+		
 	}
 }
                          /*section4*/
@@ -867,6 +880,12 @@ footer {
 
 @media screen and (max-width: 992px) {
 	.header {
+		text-align: center;
+		.search {
+			display: none;
+		}
+	}
+	.menu {
 		display: none;
 	}
 
