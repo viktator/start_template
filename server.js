@@ -5,8 +5,7 @@ const fs = require('fs');
 
 const app = express();
 
-const port = process.env.NODE_ENV || 8080
-app.set('port', port)
+app.set('port', (process.env.PORT || 8000));
 app.use(express.static(__dirname + '/public'))
 app.get('/', (req, res) => {
 	fs.readFile(path.join('./', 'public', 'index.html'), 'utf-8', (err, html) => {
@@ -14,4 +13,6 @@ app.get('/', (req, res) => {
     })
 });
 
-app.listen(port, () => console.log('run'))
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
