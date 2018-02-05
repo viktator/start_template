@@ -29,6 +29,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "animatejs": "^1.0.1",
+    "express": "^4.16.2",
     "jquery": "^3.3.1"
   }
 }

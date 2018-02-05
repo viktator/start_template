@@ -40,7 +40,7 @@ $(function () {
            $('.header').removeClass('fixed').css({background: ''});
        }
    })
-//                         slow  scrolling
+                     //      slow  scrolling
 
         $('.menu a').click(function () {
             var elementClick = $(this).attr("href");
@@ -51,14 +51,9 @@ $(function () {
             return false;
     });
 
-
-
-
-
-
 });
 
-//  slow line
+                              //   line
 
     $(function() {
         $('.menu a').on('click', function(e) {
@@ -72,7 +67,7 @@ $(function () {
 
 $(function() {
 
-                                                 //  tabs
+                                   //  tabs
   $('.tabs_control a').on('click', function(e) {
             e.preventDefault();
 
@@ -201,7 +196,7 @@ $(function() {
         $('.left').each(function() {
             var elem = $(this).offset().top;
             var winPos = $(window).scrollTop();
-
+console.log(elem)
             if (elem < winPos + 600) {
                 $('.left').addClass('bounceInLeft');
             }
