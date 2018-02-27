@@ -6,7 +6,7 @@ const fs = require('fs');
 const app = express();
 
 app.set('port', (process.env.PORT || 8000));
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/public'));
 app.get('/', (req, res) => {
 	fs.readFile(path.join('./', 'public', 'index.html'), 'utf-8', (err, html) => {
     	res.end(html)
